@@ -1,0 +1,17 @@
+{
+    "type": "postgres",
+    "port": 5431,
+    "host": "localhost",
+    "username": "docker",
+    "password": "login",
+    "database": "loginuser",
+    "migrations": [
+        "./src/shared/infra/typeorm/migrations/*.ts"
+    ],
+    "entities": [
+        "./src/modules/account/framework/typeorm/entities/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
+}
