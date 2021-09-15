@@ -7,7 +7,7 @@ import createConnection from "../../src/shared/infra/typeorm";
 
 let connection: Connection;
 
-describe('Create Category Controller', () => {
+describe('Create User Controller', () => {
   beforeAll(async () => {
     connection = await createConnection();
     await connection.runMigrations();
@@ -17,7 +17,7 @@ describe('Create Category Controller', () => {
   afterAll(async () => {
   });
 
-  it('should be able to create a new category ', async () => {
+  it('should be able to create a new User ', async () => {
     const response = await request(app).post('/users').send({
       name: 'oii',
       email: 'oi@oi.com.br',
